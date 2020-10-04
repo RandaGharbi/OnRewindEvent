@@ -3,7 +3,7 @@ import React from 'react';
 import { ApolloProvider } from 'react-apollo';
 import Layout from 'shared/layout';
 import withApollo from 'lib/withApollo';
-
+import '../styles/style.scss';
 
 class MyApp extends App {
   render() {

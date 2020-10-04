@@ -89,5 +89,6 @@ module.exports = {
     includePaths: [path.join(__dirname, 'styles')],
   },
 };
+
 const withSass = require('@zeit/next-sass');
 module.exports = withSass();

@@ -6,7 +6,7 @@ yarn
 npm install
 
 # configuration
-Add .env
+cp .env.exemple .env
 
 # Start Project
 yarn dev
