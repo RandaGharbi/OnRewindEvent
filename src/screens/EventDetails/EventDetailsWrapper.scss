@@ -1,0 +1,110 @@
+.details_container {
+  display: flex;
+  justify-content: center;
+}
+.details{
+  display: block;
+  width: 80%;
+  margin: 25px;
+}
+.Challengers_details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 200px;
+  align-items: center;
+  background-color: #243142;
+  color: white;
+  padding: 20px 0;
+  transition: all 0.4s;
+  bottom: 5px;
+  position: relative;
+  h3 {
+    font-size: 30px;
+  }
+  @media only screen and (max-width: 840px) {
+    margin: 0 auto;
+  }
+}
+.team_details {
+  display: flex;
+  flex-direction: column;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+  margin: 37px;
+  p {
+     font-family:monospace;
+  }
+  img {
+    height: 70px;
+    width: 70px;
+  }
+}
+.challengers_list {
+  display: flex;
+  flex-direction: row;
+}
+.Tags {
+  display: flex;
+  padding: 10px;
+  margin: 0 5px;
+  text-align: center;
+  color: white;
+  font-size: 10px;
+  flex-direction: row;
+}
+.category_list {
+  border: 1px solid #e3e7ef;
+  border-radius: 5px;
+  background-color: #287eb6;
+  margin: 5px;
+  width: 50px;
+  height: 30px;
+  padding-top: 8px;
+   font-family:monospace;
+  text-align: center;
+  padding-left: 1px;
+}
+
+.go_back_home {
+  width: 47px;
+  float: left;
+  position: absolute;
+  top: 0;
+  height: 49px;
+}
+.thumnail {
+  width: 100%;
+  max-height: 550px;
+  min-height: 300px;
+}
+.tag_list {
+  display: flex;
+}
+.Stream {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Video_Stream {
+  width: 40%;
+  height: auto;
+  margin: 18px;
+}
+#circle_card {
+  height: 40px;
+  width: 40px;
+  padding: 14px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: inline-block;
+  border-bottom: none;
+  text-decoration: none;
+  color: white;
+  padding-left: 10px;
+  margin: 20px;
+   font-family:monospace;
+  position: relative;
+  left: 166px;
+}

@@ -1,6 +1,6 @@
 {
   "name": "onrewind_events",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "afficher une liste d'évènements depuis un endpoint GraphQL",
   "main": ".eslintrc.js",
   "scripts": {
