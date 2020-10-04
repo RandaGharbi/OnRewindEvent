@@ -1,0 +1,10 @@
+/* Functions */
+// HEX RGB
+@function hexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+
+// CSS
+@function getColor($color_name, $alpha: 1) {
+  @return rgba(var(#{$color_name}), $alpha);
+}

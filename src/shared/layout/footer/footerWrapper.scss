@@ -1,0 +1,15 @@
+.footer_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #115e8f;
+  box-shadow: 9px -8px 9px -10px rgba(0, 0, 0, 0.75);
+  height: 60px;
+  width: 100%;
+  p{
+    color: white;
+    font-size: 15px;
+      text-transform: lowercase;
+      padding-top: 25px;
+  }
+}

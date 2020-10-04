@@ -1,0 +1,81 @@
+@import "./vars";
+@import "./functions";
+@import "./reset";
+
+/* CSS Variables */
+:root {
+  @each $key, $color in $theme-colors {
+    --color-#{$key}: #{hexToRGB($color)};
+  }
+
+  &[data-theme='dark'] {
+    @each $key, $color in $dark-theme-colors {
+      --color-#{$key}: #{hexToRGB($color)};
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color:white;
+}
+
+main{
+  min-height: 860px;
+}
+.wrapper {
+  max-width: 600px;
+  margin: auto;
+  padding: 32px;
+  text-align: center;
+  background-color:white;
+}
+
+.headding {
+  font-size: 20px;
+  color: getColor(--color-primary);
+}
+
+.contents {
+  display: flex;
+  flex-wrap: wrap;
+  .card {
+    flex-basis: calc(100% / 3);
+    flex-grow:1;
+  }
+}
+
+.card {
+  height: 100px;
+  padding: 16px;
+  color: getColor(--color-wrapper);
+  background-color: getColor(--color-secondary);
+
+  &.is-success {
+    background-color: getColor(--color-success);
+    &-opacity-50 {
+      background-color: getColor(--color-success, 0.5);
+    }
+  }
+
+  &.is-warning {
+    background-color: getColor(--color-warning);
+    &-opacity-50 {
+      background-color: getColor(--color-warning, 0.5);
+    }
+  }
+
+  &.is-danger {
+    background-color: getColor(--color-danger);
+    &-opacity-50 {
+      background-color: getColor(--color-danger, 0.5);
+    }
+  }
+}
+
+.themeButton {
+  color: getColor(--color-primary)
+}
