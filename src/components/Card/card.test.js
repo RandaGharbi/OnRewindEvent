@@ -43,9 +43,7 @@ describe('Card Component', () => {
   });
 
   test('should render name, poster ...', () => {
-    const { getByText, getByAltText } = render(
-      <Card event={expectedProps} onClick={expectedOnClick} />,
-    );
+    const { getByText, getByAltText } = render(<Card event={expectedProps} />);
     const thumbnail = getByAltText('poster');
     const eventName = getByText(expectedProps.name);
     const challengerOne = getByText(expectedProps.Challengers[0].name);
@@ -62,8 +60,8 @@ describe('Card Component', () => {
   });
 
   test('badge with one Tag', () => {
-    const { getByText } = render(<Card event={expectedProps} onClick={expectedOnClick} />);
-    const tag = getByText(expectedProps.Tags[0].name);
+    const { getByText } = render(<Card event={expectedProps} />);
+    const tag = getByText(`#${expectedProps.Tags[0].name}`);
 
     expect(tag).toBeVisible();
   });
@@ -74,9 +72,9 @@ describe('Card Component', () => {
       tagType: 'category',
     });
 
-    const { getByText } = render(<Card event={expectedProps} onClick={expectedOnClick} />);
-    const tagOne = getByText(expectedProps.Tags[0].name);
-    const tagTwo = getByText(expectedProps.Tags[1].name);
+    const { getByText } = render(<Card event={expectedProps} />);
+    const tagOne = getByText(`#${expectedProps.Tags[0].name}`);
+    const tagTwo = getByText(`#${expectedProps.Tags[1].name}`);
 
     expect(tagOne).toBeVisible();
     expect(tagTwo).toBeVisible();

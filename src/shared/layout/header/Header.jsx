@@ -1,5 +1,5 @@
 import React from 'react';
-import './headerWrapper.scss';
+// import './headerWrapper.scss';
 
 const Header = () => {
   return <nav className="header_container">
