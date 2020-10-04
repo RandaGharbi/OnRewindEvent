@@ -1,0 +1,116 @@
+.cards_element {
+  width: 289px;
+  height: auto;
+  margin: 20px;
+  background: white;
+  flex-direction: row;
+  box-shadow: 0px 0px 0px 0px #cfcfcf;
+  border: 1px solid #e3e7ef;
+  cursor: pointer;
+  transition: all 0.4s;
+  border-radius: 10px;
+  h1 {
+    color: white;
+    background-color: #243142;
+    font-size: 15px;
+    font-family:monospace;
+    font-weight: bold;
+    text-align: center;
+    font-family:monospace;
+    text-transform: uppercase;
+    margin-top: -3px;
+    @media only screen and (max-width: 320px) {
+      font-size: 17px;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    max-height: 360px;
+  }
+}
+.header_card {
+  background-color: #303f52;
+  color: white;
+  border-radius: 10px 10px 0 0;
+  min-height: 50px;
+  div {
+    width: 50%;
+    padding: 5px 3%;
+    p {
+      padding-left: 115px;
+      padding-top: 9px;
+      font-family:monospace;
+    }
+  }
+  h2 {
+    color: #d2d2d2;
+    font-family:monospace;
+  }
+  img {
+    width: 40px;
+  }
+}
+.poster_url_image {
+  width: 100%;
+  position: relative;
+  top: 0;
+  height: 170px;
+}
+#circle {
+  height: 40px;
+  width: 40px;
+  padding: 14px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: inline-block;
+  border-bottom: none;
+  text-decoration: none;
+  color: white;
+  padding-left: 17px;
+  margin: 20px;
+  font-family:monospace;
+}
+.Challengers {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #243142;
+  color: white;
+  transition: all 0.4s;
+}
+.team {
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 55px;
+  p {
+    font-family:monospace;
+  }
+  img {
+    width: 27px;
+    margin: 6px;
+  }
+}
+.tags {
+  display: flex;
+  padding: 10px;
+  margin: 0 5px;
+  text-align: center;
+  color: white;
+  font-size: 10px;
+  flex-direction: row;
+}
+.category_list {
+  border: 1px solid #e3e7ef;
+  border-radius: 5px;
+  background-color: #287eb6;
+  margin: 5px;
+  padding: 10;
+  width: 50px;
+  height: 30px;
+  padding-top: 8px;
+  font-family:monospace;
+}
+
