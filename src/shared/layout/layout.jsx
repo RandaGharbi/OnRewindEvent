@@ -2,7 +2,6 @@ import { withRouter } from 'next/router';
 
 import Header from './header';
 import Meta from './meta';
-import '../../styles/style.scss';
 import Footer from './footer';
 import { EventListProvider } from '../context';
 

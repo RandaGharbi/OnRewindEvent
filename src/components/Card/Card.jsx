@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './cardWrapper.scss';
+// import './cardWrapper.scss';
 import { TEAM_PLACEHOLDER, POSTER_PLACEHOLDER } from '../../static/images';
 import Link from 'next/link';
 
@@ -46,7 +46,6 @@ const Card = ({
               <li className="category_list" key={i}>
                 <span>
                   #{name}
-                  {i != length && i % 2 === 0 && ','}
                 </span>
               </li>
             ))}
@@ -72,4 +71,5 @@ Card.propTypes = {
     ),
   }),
 };
+
 export default Card;

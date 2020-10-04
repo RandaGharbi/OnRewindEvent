@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import Link from 'next/link';
-import './EventDetailsWrapper.scss';
+// import './EventDetailsWrapper.scss';
 import PropTypes from 'prop-types';
 import { EventListContext } from 'shared/context';
 import getSelectedEvent from 'helpers/events';
@@ -21,46 +21,48 @@ const challengersTeam = [
     pictureUrl: TEAM_PLACEHOLDER,
   },
 ];
+
 const Details = (props) => {
   const [eventList = []] = useContext(EventListContext);
   const selectedEvent = getSelectedEvent(eventList, props?.query?.id);
   const challengersData = selectedEvent?.Challengers?.length
     ? selectedEvent?.Challengers
     : challengersTeam;
+
   return (
     <div className="details_container">
       <div className="details">
-      <Link href="/">
-        <img src={GO_Back_BUTTON} alt="" className="go_back_home" />
-      </Link>
-      <div className="details_element">
-        <img src={selectedEvent?.Video?.poster || POSTER_PLACEHOLDER} alt="" className="thumnail" />
-        <div className="Challengers_details">
-          <h3>{selectedEvent.name}</h3>
-          <div className="challengers_list">
-            {challengersData.map((challenger, i) => (
-              <div className="team_details" key={i}>
-                <img src={challenger?.pictureUrl} />
-                <p>{challenger?.name}</p>
-              </div>
-            ))}
+        <Link href="/">
+          <img src={GO_Back_BUTTON} alt="" className="go_back_home" />
+        </Link>
+        <div className="details_element">
+          <img src={selectedEvent?.Video?.poster || POSTER_PLACEHOLDER} alt="" className="thumnail" />
+          <div className="Challengers_details">
+            <h3>{selectedEvent.name}</h3>
+            <div className="challengers_list">
+              {challengersData.map((challenger, i) => (
+                <div className="team_details" key={i}>
+                  <img src={challenger?.pictureUrl} />
+                  <p>{challenger?.name}</p>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="Tags">
-          <ul className="tag_list">
-            {selectedEvent?.Tags?.map((events, i) => (
-              <li className="category_list" key={i}>
-                <span>#{events.name || 'Default Tags'}</span>
-              </li>
+          <div className="Tags">
+            <ul className="tag_list">
+              {selectedEvent?.Tags?.map((events, i) => (
+                <li className="category_list" key={i}>
+                  <span>#{events.name || 'Default Tags'}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="Stream">
+            {selectedEvent?.Streams?.map((video, i) => (
+              <video controls key={i} className="Video_Stream">
+                <source src={video.url || VIDEO_URL} type="video/mp4" />
+              </video>
             ))}
-          </ul>
-        </div>
-        <div className="Stream">
-          {selectedEvent?.Streams?.map((video, i) => (
-            <video controls key={i} className="Video_Stream">
-              <source src={video.url || VIDEO_URL} type="video/mp4" />
-            </video>
-          ))}
           </div>
         </div>
       </div>
@@ -68,16 +70,8 @@ const Details = (props) => {
   );
 };
 Details.propTypes = {
-  event: PropTypes.shape({
-    id: PropTypes.string,
-    name: PropTypes.string,
-    Video: PropTypes.shape({
-      poster: PropTypes.string,
-    }),
-    Challengers: PropTypes.arrayOf(PropTypes.shape({
-      name: PropTypes.string,
-      pictureUrl: PropTypes.string,
-    })),
+  query: PropTypes.shape({
+    id: PropTypes.string
   }),
 };
 export default Details;

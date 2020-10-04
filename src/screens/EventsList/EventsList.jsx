@@ -1,7 +1,7 @@
 import React, { useEffect, useContext } from 'react';
 import Card from 'components/Card';
 import { useQuery } from '@apollo/react-hooks';
-import './EventListWrapper.scss';
+// import './EventListWrapper.scss';
 
 import EVENTS_LIST_QUERY from 'graphql/query/getAllEvents';
 import { EventListContext } from 'shared/context';
@@ -15,7 +15,9 @@ const EventsListScreen = () => {
   useEffect(() => {
     setEventList(data?.allEvents?.items || []);
   }, [data]);
+
   if (!eventList.length) return null;
+
   return (
     <section className="sectionClassName">
       {eventList?.map((event, index) => (
