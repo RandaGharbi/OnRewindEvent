@@ -1,14 +1,12 @@
 # OnRewindEvent
 afficher une liste d'évènements depuis un endpoint GraphQL
 
-#installation
+# installation
 yarn 
 npm install
 
-#configuration
-
+# configuration
 Add .env
 
-#Start
-
+# Start Project
 yarn dev
